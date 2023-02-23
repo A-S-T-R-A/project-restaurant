@@ -1,5 +1,6 @@
 import React from "react"
 import { SubHeading, MenuItem } from "../../components"
+import { LazyImage } from "../../components/LazyImage/LazyImage"
 import { images, data } from "../../constants"
 import "./SpecialMenu.css"
 
@@ -28,7 +29,7 @@ function SpecialMenu() {
                     </div>
                 </div>
                 <div className="app__specialMenu-menu-img">
-                    <img src={images.menu} alt="menu img" />
+                    <LazyImage src={images.menu} alt="menu img" />
                 </div>
                 <div className="app__specialMenu-menu_cocktail flex__center">
                     <p className="app__specialMenu-menu_heading">Cocktails</p>

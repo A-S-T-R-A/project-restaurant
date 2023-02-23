@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense, useEffect, useState } from "react"
 
 import {
     AboutUs,
@@ -15,19 +15,37 @@ import { Navbar } from "./components"
 import "./index.css"
 import "./App.css"
 
-const App = () => (
-    <div>
-        <Navbar />
-        <Header />
-        <AboutUs />
-        <SpecialMenu />
-        <Chef />
-        <Intro />
-        <Laurels />
-        <Gallery />
-        <FindUs />
-        <Footer />
-    </div>
-)
+function App() {
+    const [shouldLoadSecondChunk, setShouldLoadSecondChunk] = useState(false)
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setShouldLoadSecondChunk(true)
+        }, 500)
+
+        return () => clearTimeout(timeout)
+    }, [])
+
+    return (
+        <div>
+            <Suspense fallback={<></>}>
+                <Navbar />
+                <Header />
+            </Suspense>
+            {shouldLoadSecondChunk && (
+                <Suspense fallback={<></>}>
+                    <AboutUs />
+                    <SpecialMenu />
+                    <Chef />
+                    <Intro />
+                    <Laurels />
+                    <Gallery />
+                    <FindUs />
+                    <Footer />
+                </Suspense>
+            )}
+        </div>
+    )
+}
 
 export default App

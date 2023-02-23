@@ -1,6 +1,6 @@
 import React from "react"
 import { SubHeading, MenuItem } from "../../components"
-import { LazyImage } from "../../components/LazyImage/LazyImage"
+import { LazyImage } from "../../common/LazyImage/LazyImage"
 import { images, data } from "../../constants"
 import "./SpecialMenu.css"
 

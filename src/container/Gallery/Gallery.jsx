@@ -7,7 +7,7 @@ import {
 } from "react-icons/bs"
 
 import { SubHeading } from "../../components"
-import { LazyImage } from "../../components/LazyImage/LazyImage"
+import { LazyImage } from "../../common/LazyImage/LazyImage"
 import { images } from "../../constants"
 
 import "./Gallery.css"

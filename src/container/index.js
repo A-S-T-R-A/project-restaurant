@@ -1,21 +1,11 @@
-import AboutUs from './AboutUs/AboutUs';
-import Chef from './Chef/Chef';
-import FindUs from './Findus/FindUs';
-import Footer from './Footer/Footer';
-import Gallery from './Gallery/Gallery';
-import Header from './Header/Header';
-import Intro from './Intro/Intro';
-import Laurels from './Laurels/Laurels';
-import SpecialMenu from './Menu/SpecialMenu';
+import { lazy } from "react"
 
-export {
-  AboutUs,
-  Chef,
-  FindUs,
-  Footer,
-  Gallery,
-  Header,
-  Intro,
-  Laurels,
-  SpecialMenu,
-};
+export const AboutUs = lazy(() => import("./AboutUs/AboutUs"))
+export const Chef = lazy(() => import("./Chef/Chef"))
+export const FindUs = lazy(() => import("./Findus/FindUs"))
+export const Footer = lazy(() => import("./Footer/Footer"))
+export const Gallery = lazy(() => import("./Gallery/Gallery"))
+export const Header = lazy(() => import("./Header/Header"))
+export const Intro = lazy(() => import("./Intro/Intro"))
+export const Laurels = lazy(() => import("./Laurels/Laurels"))
+export const SpecialMenu = lazy(() => import("./Menu/SpecialMenu"))

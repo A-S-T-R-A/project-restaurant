@@ -66,16 +66,21 @@
 @media screen and (max-width: 900px) {
     .app__aboutus-content {
         flex-direction: column;
+        justify-content: space-between;
     }
 
     .app__aboutus-content_knife {
-        margin: 4rem 0;
+        display: none;
+    }
+
+    .app__aboutus-content_about {
+        margin-bottom: 4rem;
     }
 }
 
 @media screen and (max-width: 650px) {
     .app__aboutus-overlay img {
-        width: 80%;
-        height: 320px;
+        width: 300px;
+        height: 350px;
     }
 }

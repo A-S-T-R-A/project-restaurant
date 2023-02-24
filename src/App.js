@@ -17,7 +17,7 @@ import "./App.css"
 import { useScrollTimeoutLoading } from "./common/useScrollTimeoutLoading/useScrollTimeoutLoading"
 
 function App() {
-    const { ready } = useScrollTimeoutLoading(5000)
+    const { ready } = useScrollTimeoutLoading(1000)
 
     return (
         <div>

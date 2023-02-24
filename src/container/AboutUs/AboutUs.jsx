@@ -1,13 +1,23 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { LazyImage } from "../../common/LazyImage/LazyImage"
+import { useOnScreen } from "../../common/useOnScreen/useOnScreen"
 import { images } from "../../constants"
 import "./AboutUs.css"
 
 function AboutUs() {
+    const { setRef, visible } = useOnScreen({ threshold: 0 }, false)
+
+    useEffect(() => {
+        if (visible) {
+            import("./AsyncApp.css")
+        }
+    }, [visible])
+
     return (
         <div
             className="app__aboutus app__bg flex__center section__padding"
             id="about"
+            ref={setRef}
         >
             <div className="app__aboutus-overlay flex__center">
                 <img src={images.G} alt="g letter" />

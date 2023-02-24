@@ -5,23 +5,28 @@ export function useOnScreen(options, triggerOnce = true) {
     const [visible, setVisible] = useState(false)
 
     useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            setVisible(entry.isIntersecting)
-            if (triggerOnce) {
-                observer.unobserve(ref)
-            }
-        }, options)
+        let observer
 
         if (ref) {
+            observer = new IntersectionObserver(([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true)
+                }
+            }, options)
+
             observer.observe(ref)
         }
 
+        if (triggerOnce && visible) {
+            observer.unobserve(ref)
+        }
+
         return () => {
-            if (ref) {
+            if (observer && ref) {
                 observer.unobserve(ref)
             }
         }
-    }, [ref, options, triggerOnce])
+    }, [ref, options, visible, triggerOnce])
 
     return { setRef, visible }
 }

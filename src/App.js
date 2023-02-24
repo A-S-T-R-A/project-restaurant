@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react"
+import React, { Suspense } from "react"
 
 import {
     AboutUs,
@@ -14,17 +14,10 @@ import {
 import { Navbar } from "./components"
 import "./index.css"
 import "./App.css"
+import { useScrollTimeoutLoading } from "./common/useScrollTimeoutLoading/useScrollTimeoutLoading"
 
 function App() {
-    const [shouldLoadSecondChunk, setShouldLoadSecondChunk] = useState(false)
-
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setShouldLoadSecondChunk(true)
-        }, 500)
-
-        return () => clearTimeout(timeout)
-    }, [])
+    const { ready } = useScrollTimeoutLoading(5000)
 
     return (
         <div>
@@ -32,7 +25,7 @@ function App() {
                 <Navbar />
                 <Header />
             </Suspense>
-            {shouldLoadSecondChunk && (
+            {ready && (
                 <Suspense fallback={<></>}>
                     <AboutUs />
                     <SpecialMenu />

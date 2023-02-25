@@ -17,11 +17,11 @@ import "./App.css"
 import { useScrollTimeoutLoading } from "./common/useScrollTimeoutLoading/useScrollTimeoutLoading"
 
 function App() {
-    const { ready } = useScrollTimeoutLoading(5000)
+    const { ready } = useScrollTimeoutLoading(500)
     useEffect(() => {
         setTimeout(() => {
             import("./AsyncApp.css")
-        }, 100)
+        }, 400)
     }, [])
 
     return (

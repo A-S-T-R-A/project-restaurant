@@ -1,8 +1,14 @@
-.app__bg {
-    background: url('../../assets/bg.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    transition: all 0.3s ease-in-out;
-}
+ .app__bg {
+     background: url('../../assets/bg1.jpg');
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     transition: all 0.3s ease-in-out;
+ }
+
+ @media(max-width: 960px) {
+     .app__bg {
+         background-attachment: scroll;
+     }
+ }

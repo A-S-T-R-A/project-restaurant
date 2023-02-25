@@ -1,6 +1,5 @@
 import React from "react"
 import { SubHeading } from "../../components"
-import { LazyImage } from "../../common/LazyImage/LazyImage"
 import { images } from "../../constants"
 import "./Chef.css"
 
@@ -8,7 +7,7 @@ function Chef() {
     return (
         <div className="app__bg app__wrapper section__padding app__hugeBg">
             <div className="app__wrapper_img app__wrapper_img-reverse">
-                <LazyImage src={images.chef} alt="chef" />
+                <img src={images.chef} alt="chef" />
             </div>
             <div className="app__wrapper_info">
                 <SubHeading title="Chef's Word" />

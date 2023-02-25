@@ -19,7 +19,9 @@
      transition: all 0.3s ease-in-out;
  }
 
- /*  @media screen and (max-width: 480px) {
+ @media screen and (max-width: 480px) {
      .app__bg::before {
-         background-size: fill;
-         /* transform: rotate(180deg); */
+         background-size: contain;
+         /*  transform: rotate(180deg); */
+     }
+ }

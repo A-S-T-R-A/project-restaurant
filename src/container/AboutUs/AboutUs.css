@@ -102,5 +102,10 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     transition: all 0.3s ease-in-out;
+}
 
+@media (max-width: 480px) {
+    .bg__mobile {
+        transform: rotate(90deg);
+    }
 }

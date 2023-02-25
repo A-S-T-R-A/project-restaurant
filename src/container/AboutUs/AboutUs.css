@@ -102,11 +102,11 @@
     left: 0;
     right: 0;
     bottom: -1px;
-    background-image: url('../../assets/bg.jpg');
+    background: url('../../assets/bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     transition: all 0.3s ease-in-out;
 }
 

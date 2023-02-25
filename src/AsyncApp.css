@@ -1,5 +1,6 @@
  .app__bg {
      /*    background: url('../../assets/bg100.webp'); */
+     background: url('./assets/bg1.jpg');
      background-position: center;
      background-size: cover;
      background-repeat: no-repeat;

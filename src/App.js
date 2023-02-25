@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import React, { Suspense, useEffect } from "react"
 
 import {
     AboutUs,
@@ -17,13 +17,19 @@ import "./App.css"
 import { useScrollTimeoutLoading } from "./common/useScrollTimeoutLoading/useScrollTimeoutLoading"
 
 function App() {
-    const { ready } = useScrollTimeoutLoading(1000)
+    const { ready } = useScrollTimeoutLoading(5000)
+    useEffect(() => {
+        setTimeout(() => {
+            import("./AsyncApp.css")
+        }, 100)
+    }, [])
 
     return (
         <div>
             <Suspense fallback={<></>}>
                 <Navbar />
                 <Header />
+                {/* <AboutUs /> */}
             </Suspense>
             {ready && (
                 <Suspense fallback={<></>}>

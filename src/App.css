@@ -10,7 +10,7 @@
 
 body,
 .app__bg {
-  background: white;
+  background: rgb(12, 12, 12);
 }
 
 .app__wrapper {

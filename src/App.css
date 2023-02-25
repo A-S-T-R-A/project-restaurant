@@ -8,6 +8,7 @@
   align-items: center;
 }
 
+body,
 .app__bg {
   background: rgb(12, 12, 12);
 }
@@ -16,7 +17,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   min-height: 100vh;
 }
 
@@ -35,7 +35,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-left: 2rem;
 }
 

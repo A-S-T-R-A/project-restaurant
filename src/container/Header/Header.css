@@ -1,5 +1,6 @@
 .app__header {
     background-color: var(--color-black);
+    padding-top: 200px;
 }
 
 .app__header-h1 {
@@ -24,5 +25,11 @@
 @media screen and (max-width: 650px) {
     .app__wrapper_img img {
         width: 80%;
+    }
+
+    .app__header-h1 {
+        letter-spacing: 0;
+        font-size: 70px;
+        line-height: 100px;
     }
 }

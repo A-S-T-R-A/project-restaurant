@@ -15,7 +15,8 @@ function AboutUs() {
 
     return (
         <div
-            className="app__aboutus container__mobile flex__center section__padding"
+            /* className="app__aboutus container__mobile flex__center section__padding" */
+            className="aboutus__container"
             id="about"
             ref={setRef}
         >

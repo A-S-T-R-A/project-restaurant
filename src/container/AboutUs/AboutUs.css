@@ -86,8 +86,14 @@
 
 
 
-.container__mobile {
+.aboutus__container {
     position: relative;
+    z-index: 0;
+    padding: 4rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .bg__mobile {

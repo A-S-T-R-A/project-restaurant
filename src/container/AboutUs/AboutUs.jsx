@@ -15,10 +15,11 @@ function AboutUs() {
 
     return (
         <div
-            className="app__aboutus app__bg flex__center section__padding"
+            className="app__aboutus container__mobile flex__center section__padding"
             id="about"
             ref={setRef}
         >
+            <div className="bg__mobile" />
             <div className="app__aboutus-overlay flex__center">
                 <img src={images.G} alt="g letter" />
             </div>

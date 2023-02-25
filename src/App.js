@@ -27,7 +27,9 @@ function App() {
             </Suspense>
             {ready && (
                 <Suspense fallback={<></>}>
-                    <AboutUs />
+                    <AboutUs c="bg100" />
+                    <AboutUs c="bg99" />
+                    <AboutUs c="bg90" />
                     <SpecialMenu />
                     <Chef />
                     <Intro />

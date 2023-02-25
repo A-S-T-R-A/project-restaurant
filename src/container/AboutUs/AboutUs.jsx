@@ -4,7 +4,7 @@ import { useOnScreen } from "../../common/useOnScreen/useOnScreen"
 import { images } from "../../constants"
 import "./AboutUs.css"
 
-function AboutUs() {
+function AboutUs({ c }) {
     const { setRef, visible } = useOnScreen({ threshold: 0 }, false)
 
     useEffect(() => {
@@ -15,7 +15,9 @@ function AboutUs() {
 
     return (
         <div
-            className="app__aboutus app__bg flex__center section__padding"
+            className={
+                "app__aboutus app__bg flex__center section__padding" + " " + c
+            }
             id="about"
             ref={setRef}
         >

@@ -107,5 +107,16 @@
 @media (max-width: 480px) {
     .bg__mobile {
         transform: rotate(90deg);
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        background: url('../../assets/bg.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        transition: all 0.3s ease-in-out;
     }
 }

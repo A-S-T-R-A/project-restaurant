@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 
 export function LazyImage({ src, alt, rootMargin = "250px", ...props }) {
-    const [ref, setRef] = useState(null)
-    const [isVisible, setIsVisible] = useState(false)
-
+    //const [ref, setRef] = useState(null)
+    const [isVisible, setIsVisible] = useState(true)
+    /* 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -24,7 +24,13 @@ export function LazyImage({ src, alt, rootMargin = "250px", ...props }) {
                 observer.unobserve(ref)
             }
         }
-    }, [ref, rootMargin])
+    }, [ref, rootMargin]) */
 
-    return <img ref={setRef} src={isVisible ? src : ""} alt={alt} {...props} />
+    return (
+        <img
+            /* ref={setRef} */ src={isVisible ? src : ""}
+            alt={alt}
+            {...props}
+        />
+    )
 }

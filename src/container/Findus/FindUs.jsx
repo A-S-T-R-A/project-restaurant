@@ -1,7 +1,6 @@
 import React from "react"
 
 import { SubHeading } from "../../components"
-import { LazyImage } from "../../common/LazyImage/LazyImage"
 import { images } from "../../constants"
 
 function FindUs() {
@@ -38,7 +37,7 @@ function FindUs() {
                 </button>
             </div>
             <div className="app__wrapper_img">
-                <LazyImage src={images.findus} alt="findus" />
+                <img src={images.findus} alt="findus" />
             </div>
         </div>
     )

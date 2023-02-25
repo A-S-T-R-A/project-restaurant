@@ -7,7 +7,6 @@ import {
 } from "react-icons/bs"
 
 import { SubHeading } from "../../components"
-import { LazyImage } from "../../common/LazyImage/LazyImage"
 import { images } from "../../constants"
 
 import "./Gallery.css"
@@ -52,7 +51,7 @@ function Gallery() {
                             className="app__gallery-images_card flex__center"
                             key={`gallery_image-${index + 1}`}
                         >
-                            <LazyImage src={image} alt="gallery" />
+                            <img src={image} alt="gallery" />
                             <BsInstagram className="gallery__image-icon" />
                         </div>
                     ))}

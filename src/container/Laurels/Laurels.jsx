@@ -1,7 +1,6 @@
 import React from "react"
 
 import { SubHeading } from "../../components"
-import { LazyImage } from "../../common/LazyImage/LazyImage"
 import { images, data } from "../../constants"
 
 import "./Laurels.css"
@@ -33,7 +32,7 @@ function Laurels() {
                 </div>
             </div>
             <div className="app__wrapper_img">
-                <LazyImage src={images.laurels} alt="laurels" />
+                <img src={images.laurels} alt="laurels" />
             </div>
         </div>
     )

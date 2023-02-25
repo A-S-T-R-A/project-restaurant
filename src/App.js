@@ -29,13 +29,10 @@ function App() {
             <Suspense fallback={<></>}>
                 <Navbar />
                 <Header />
-                {/* <AboutUs /> */}
+                <AboutUs />
             </Suspense>
             {ready && (
                 <Suspense fallback={<></>}>
-                    <AboutUs c="bg100" />
-                    <AboutUs c="bg99" />
-                    <AboutUs c="bg90" />
                     <SpecialMenu />
                     <Chef />
                     <Intro />

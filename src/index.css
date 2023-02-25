@@ -1,4 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Cormorant Upright', serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/cormorantupright/v7/0ybmGD4kxqXBmOVLG30OGw8C.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Upright', serif;
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/cormorantupright/v7/0ybqGD4kxqXBmOVLG30OGw8CmuTm.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Upright', serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/cormorantupright/v7/0ybmGD4kxqXBmOVLG30OGw8CkOV_.ttf) format('truetype');
+}
 
 :root {
   --font-base: 'Cormorant Upright', serif;
